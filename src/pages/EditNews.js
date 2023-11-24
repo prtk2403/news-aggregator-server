@@ -24,13 +24,13 @@ const EditNews = () => {
   useEffect(() => {
     console.log(convertToRaw(editorState.getCurrentContent()));
   }, [editorState]);
-  const URL = "http://localhost:5000/api/newsitems/editnews";
+  const URL = "https://news-one-server.vercel.app/api/newsitems/editnews";
 
 
   const getData = async () => {
     try {
       const result = await axios.post(
-        "http://localhost:5000/api/newsitems/getnewsbyid" , {newsid : params.newsid}
+        "https://news-one-server.vercel.app/api/newsitems/getnewsbyid" , {newsid : params.newsid}
       );
       setTitle(result.data.title);
       setDescription(result.data.description);

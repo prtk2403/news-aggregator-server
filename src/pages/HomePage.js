@@ -12,7 +12,7 @@ const HomePage = () => {
   const getData = async () => {
     try {
       const result = await axios.get(
-        "http://localhost:5000/api/newsitems/getnews"
+        "https://news-one-server.vercel.app/api/newsitems/getnews"
       );
       setNewsitems(result.data);
       // toast("Success" , "success")

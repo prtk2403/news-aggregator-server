@@ -11,7 +11,7 @@ const PostedNews = () => {
   const getData = async () => {
     try {
       const result = await axios.post(
-        "http://localhost:5000/api/newsitems/getnewsbyuser",
+        "https://news-one-server.vercel.app/api/newsitems/getnewsbyuser",
         { userid: user._id }
       );
       setNewsitems(result.data);
@@ -24,7 +24,7 @@ const PostedNews = () => {
   }, []);
   const deletenews = async (newsid) => {
     try {
-       await axios.post( "http://localhost:5000/api/newsitems/deletenews",{
+       await axios.post( "https://news-one-server.vercel.app/api/newsitems/deletenews",{
          newsid }
       );
       toast("Deleted Successfully")

@@ -8,7 +8,7 @@ export function SignUp() {
     const [email,setEmail]=useState('')
     const[password,setPassword]=useState('')
     const [register,setRegister]=useState(false);
-    const URL1 = "http://localhost:5000/api/users/register";
+    const URL1 = "https://news-one-server.vercel.app//api/users/register";
     const userregister = async ()=>{
         try {
           const payload = {

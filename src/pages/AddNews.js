@@ -21,7 +21,7 @@ const AddNews = () => {
   useEffect(() => {
     console.log(convertToRaw(editorState.getCurrentContent()));
   }, [editorState]);
-  const URL = "http://localhost:5000/api/newsitems/addnews";
+  const URL = "https://news-one-server.vercel.app/api/newsitems/addnews";
   const save = async () => {
     setLoading(true);
     try {

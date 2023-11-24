@@ -8,7 +8,7 @@ export function SignIn() {
     const [email,setEmail]=useState('')
         const[password,setPassword]=useState('')
         const navigate=useNavigate();
-        const URL = "http://localhost:5000/api/users/";
+        const URL = "https://news-one-server.vercel.app/api/users/";
         const userlogin = async ()=>{
             try {
               const payload = {

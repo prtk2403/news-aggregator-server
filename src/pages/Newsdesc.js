@@ -10,7 +10,7 @@ const Newsdesc = () => {
     const getData = async () => {
         try {
           const result = await axios.post(
-            "http://localhost:5000/api/newsitems/getnewsbyid" , {newsid : params.newsid}
+            "https://news-one-server.vercel.app/api/newsitems/getnewsbyid" , {newsid : params.newsid}
           );
           setNewsItems(result.data);
         } catch (error) {

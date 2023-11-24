@@ -11,8 +11,8 @@ const LandingPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const URL1 = "http://localhost:5000/api/users/register";
-  const URL = "http://localhost:5000/api/users/login  ";
+  const URL1 = "https://news-one-server.vercel.app/api/users/register";
+  const URL = "https://news-one-server.vercel.app/api/users/login  ";
   const userregister = async () => {
     try {
       const payload = {
@@ -38,7 +38,7 @@ const LandingPage = () => {
         email,
         password,
       };
-      const result = await axios.post("http://localhost:5000/api/users/login", payload);
+      const result = await axios.post("https://news-one-server.vercel.app//api/users/login", payload);
       toast("Login Successful", "success");
       console.log(result.data);
       localStorage.setItem("newsone-user", JSON.stringify((result.data)));
