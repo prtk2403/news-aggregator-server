@@ -38,7 +38,7 @@ const LandingPage = () => {
         email,
         password,
       };
-      const result = await axios.post("https://news-one-server.vercel.app//api/users/login", payload);
+      const result = await axios.post("https://news-one-server.vercel.app/api/users/login", payload);
       toast("Login Successful", "success");
       console.log(result.data);
       localStorage.setItem("newsone-user", JSON.stringify((result.data)));
